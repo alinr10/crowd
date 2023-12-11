@@ -37,16 +37,16 @@ app.use(session({
   saveUninitialized: false,
   store: MongoStore.create({ 
     mongoUrl: process.env.DB_URI,
-    collectionName: 'sessions' 
+    collectionName: 'sessions' // Opsiyonel: Oturumların saklanacağı koleksiyon adı
   })
 }));
 
 
-//app.use(session({
-  //secret: process.env.SECRET_TOKEN, 
- // resave: true,
-  //saveUninitialized: true,
-   //cookie: { secure: false }
+app.use(session({
+  secret: process.env.SECRET_TOKEN, 
+  resave: true,
+  saveUninitialized: true,
+   cookie: { secure: false }
 }));
 
 app.use((req, res, next) => {
