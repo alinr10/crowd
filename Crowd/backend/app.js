@@ -44,11 +44,11 @@ app.use(session({
   secret: process.env.SECRET_TOKEN, 
   resave: true,
   saveUninitialized: true,
-   cookie: { secure: true }
+   //cookie: { secure: false }
 }));
 
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://65776cb7e97ae540bba36a47--friendly-figolla-b94c3c.netlify.app");
+  res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Methods", "GET, POST ,PUT,DELETE,PATCH");
   res.header("Access-Control-Allow-Headers", "Content-Type, Authorization, x-access-token");
   res.header("Access-Control-Allow-Credentials", "true");
