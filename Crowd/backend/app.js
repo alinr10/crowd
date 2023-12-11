@@ -35,6 +35,7 @@ app.use(session({
   secret: process.env.SECRET_TOKEN,
   resave: false,
   saveUninitialized: false,
+  cookie: { secure: true },
   store: MongoStore.create({ 
     mongoUrl: process.env.DB_URI,
     collectionName: 'sessions' // Opsiyonel: Oturumların saklanacağı koleksiyon adı
@@ -46,7 +47,7 @@ app.use(session({
   secret: process.env.SECRET_TOKEN, 
   resave: true,
   saveUninitialized: true,
-   cookie: { secure: false }
+   cookie: { secure: true }
 }));
 
 app.use((req, res, next) => {
