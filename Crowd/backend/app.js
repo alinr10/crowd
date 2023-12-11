@@ -35,15 +35,17 @@ app.use(session({
   secret: process.env.SECRET_TOKEN,
   resave: false,
   saveUninitialized: false,
-  //store: MongoStore.create({ mongoUrl: process.env.DB_URI })
-
+  store: MongoStore.create({ 
+    mongoUrl: process.env.DB_URI,
+    collectionName: 'sessions' 
+  })
 }));
 
 
-app.use(session({
-  secret: process.env.SECRET_TOKEN, 
-  resave: true,
-  saveUninitialized: true,
+//app.use(session({
+  //secret: process.env.SECRET_TOKEN, 
+ // resave: true,
+  //saveUninitialized: true,
    //cookie: { secure: false }
 }));
 
