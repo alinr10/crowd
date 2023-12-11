@@ -8,7 +8,7 @@ import jobRoute from './src/routes/jobRoute.js';
 import applicantRoute from './src/routes/applicantRoute.js'
 import freelancerRoute from './src/routes/freelancerRoute.js'
 import session from 'express-session';
-import MongoStore from 'connect-mongo';
+//import MongoStore from 'connect-mongo';
 import multer from 'multer';
 import path from 'path';
 dotenv.config()
@@ -35,7 +35,7 @@ app.use(session({
   secret: process.env.SECRET_TOKEN,
   resave: false,
   saveUninitialized: false,
-  store: MongoStore.create({ mongoUrl: process.env.DB_URI })
+  //store: MongoStore.create({ mongoUrl: process.env.DB_URI })
 
 }));
 
