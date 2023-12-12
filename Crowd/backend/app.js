@@ -37,17 +37,17 @@ app.use(session({
   secret: process.env.SECRET_TOKEN,
   resave: false,
   saveUninitialized: false,
-  store: MongoStore.create({ mongoUrl: process.env.DB_URI })
-
+  store: MongoStore.create({ mongoUrl: process.env.DB_URI }),
+  sameSite:'none'
 }));
 
 
-app.use(session({
-  secret: process.env.SECRET_TOKEN, 
-  resave: true,
-  saveUninitialized: true,
-   //cookie: { secure: false }
-}));
+//app.use(session({
+ // secret: process.env.SECRET_TOKEN, 
+ // resave: true,
+ // saveUninitialized: true,
+   // cookie: { secure: false }
+//}));
 
 app.use((req, res, next) => {
 res.header("Access-Control-Allow-Origin", "https://friendly-figolla-b94c3c.netlify.app");
