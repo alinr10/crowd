@@ -38,4 +38,6 @@ router.route("/profile/:id").get(userController.getProfile)
 
 router.route("/check-session").get(userController.checkUser)
 
+router.route("/ping").get(userController.ping)
+
 export default router   

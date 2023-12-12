@@ -66,7 +66,7 @@ app.use('/uploads',express.static('uploads'));
 
 
 
-const backendURL = 'https://crowd-app-qfen.onrender.com'; 
+const backendURL = 'https://crowd-app-qfen.onrender.com/user/ping'; 
 
 function pingBackend() {
   axios.get(backendURL) 

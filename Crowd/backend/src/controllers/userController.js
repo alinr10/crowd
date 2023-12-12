@@ -141,8 +141,12 @@ function checkPasswordValidity(password) {
 }
 
 
+const ping = async (req, res) => {
 
+  return res.status(201).json({ message: "pinging successful" });
+} 
   
+
   const login = async (req, res) => {
 
   const { email, password } = req.body;
@@ -400,4 +404,4 @@ const beFreelancer= async (req,res)=>{
   }
 };
  export {registerCompanyUser,registerPersonelUser,login,logout,addPersonalDetail,getProfile,checkUser,addProfilePicture,addCompanyDetail,
-  beFreelancer}
+  beFreelancer,ping}
