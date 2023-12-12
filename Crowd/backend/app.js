@@ -37,15 +37,10 @@ app.use(session({
   cookie: { secure: true, sameSite:'none' }
 }));
 
-//app.use(session({
- // secret: process.env.SECRET_TOKEN, 
- // resave: true,
- // saveUninitialized: true,
-   // cookie: { secure: false }
-//}));
+
 
 app.use((req, res, next) => {
-res.header("Access-Control-Allow-Origin", "https://friendly-figolla-b94c3c.netlify.app");
+res.header("Access-Control-Allow-Origin", "https://crowd-app.netlify.app");
   res.header("Access-Control-Allow-Methods", "GET, POST ,PUT,DELETE,PATCH");
   res.header("Access-Control-Allow-Headers", "Content-Type, Authorization, x-access-token");
   res.header("Access-Control-Allow-Credentials", "true");
