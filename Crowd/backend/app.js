@@ -8,7 +8,7 @@ import jobRoute from './src/routes/jobRoute.js';
 import applicantRoute from './src/routes/applicantRoute.js'
 import freelancerRoute from './src/routes/freelancerRoute.js'
 import session from 'express-session';
-//import MongoStore from 'connect-mongo';
+import MongoStore from 'connect-mongo';
 import multer from 'multer';
 import path from 'path';
 dotenv.config()
