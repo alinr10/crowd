@@ -27,6 +27,8 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 app.use(upload.single('profilePhoto'));
 
+app.set("trust proxy", 1);
+
 
 
 
