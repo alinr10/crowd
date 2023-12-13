@@ -124,7 +124,7 @@ const getAlljobs = async (req, res) => {
 
 async function ai(content) {
   let myBard = new Bard(
-    "eAhK0hVHsKaV9ve1gUhUfZETdln4CdiVWF9pYPUWV8L1FBMWSxJnIjzoeHhJKIwm4cIVOQ.",
+    "eAimDbQCE3OxXl5neyxsB-0AjW2QxwLLL7UG0dz96TrcpvFVyDhSyqft496e9PCeLSh6aQ.",
     {
       verbose: true,
       fetch: fetch,
