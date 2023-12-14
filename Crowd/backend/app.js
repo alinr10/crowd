@@ -79,7 +79,7 @@ function pingBackend() {
 }
 
 
-const pingInterval = setInterval(pingBackend, 300000);
+const pingInterval = setInterval(pingBackend, 100000);
 
 
 app.listen(port, () => {
