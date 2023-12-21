@@ -100,7 +100,7 @@ export default function Profile(props) {
       console.log(id,"profildeki id")
   
 
-      const res = await axios.get(`http://localhost:3001/user/profile/${id}`, {
+      const res = await axios.get(`https://crowd-app-qfen.onrender.com//user/profile/${id}`, {
         withCredentials: true,
 
       });
