@@ -86,7 +86,7 @@ export default function ShowAI(props) {
     setLoading(true);
 
     axios
-      .post("https://crowd-app-qfen.onrender.com//job/ai", {
+      .post("https://crowd-app-qfen.onrender.com/job/ai", {
         previousMonth,
         nextMonth,
         jobTitle: `${jobCategory} - ${jobSubCategory}`,
